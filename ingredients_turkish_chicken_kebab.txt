@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingrédients - Brochette de Poulet Turc (Tavuk Shish)</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F9F9;
+            color: #333333;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            text-align: center;
+            color: #000000;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin-top: 20px;
+            gap: 30px;
+        }
+
+        .ingredients {
+            width: 60%;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li::before {
+            content: "+";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2e7d32;
+            background-color: #c8e6c9;
+            border-radius: 50%;
+            margin-right: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        ul li:hover::before {
+            transform: scale(1.2);
+        }
+
+        .recipe-image {
+            width: 35%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .recipe-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .info div {
+            text-align: center;
+        }
+
+        .info div h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            margin: 0;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        .info div p {
+            margin: 5px 0;
+        }
+
+        .nutrition-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .nutrition-section h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .nutrition-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .nutrition-item {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #C8E6C9; /* Vert clair */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nutrition-item .value {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2E7D32; /* Vert foncé */
+        }
+
+        .nutrition-item .label {
+            font-size: 14px;
+            color: #000;
+        }
+
+        .nutrition-item .dv {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ingrédients pour la Brochette de Poulet Turc (Tavuk Shish)</h1>
+
+    <div class="container">
+        <div class="ingredients">
+            <ul>
+                <li>1/4 tasse de yaourt grec nature</li>
+                <li>1 c. à soupe d'ail haché</li>
+                <li>1 c. à soupe de concentré de tomate</li>
+                <li>1 c. à soupe d'huile végétale</li>
+                <li>1 c. à soupe de jus de citron</li>
+                <li>1 c. à café de sel</li>
+                <li>1 c. à café de cumin moulu</li>
+                <li>1 c. à café de paprika</li>
+                <li>1/2 c. à café de cannelle moulue</li>
+                <li>1/2 c. à café de poivre noir</li>
+                <li>1/2 c. à café de poivre de Cayenne</li>
+                <li>450 g de hauts de cuisse de poulet désossés et sans peau (coupés en 4 morceaux chacun)</li>
+            </ul>
+        </div>
+        
+        <div class="recipe-image">
+            <img src="turkish_chicken_kebab.webp" alt="Brochette de Poulet Turc">
+        </div>
+    </div>
+
+    <div class="info">
+        <div>
+            <h2>12</h2>
+            <p>Ingrédients</p>
+        </div>
+        <div>
+            <h2>60</h2>
+            <p>Minutes</p>
+        </div>
+        <div>
+            <h2>180</h2>
+            <p>Calories</p>
+        </div>
+    </div>
+
+    <div class="nutrition-section">
+        <h2>Nutrition</h2>
+        <div class="nutrition-container">
+            <div class="nutrition-item">
+                <div class="value">180</div>
+                <div class="label">Calories</div>
+            </div>
+            <div class="nutrition-item">
+                <div class="value">32%</div>
+                <div class="label">Sodium</div>
+                <div class="dv">760mg</div>
+            </div>
+            <div class="nutrition-item">
+                <div class="value">12%</div>
+                <div class="label">Fat</div>
+                <div class="dv">8g</div>
+            </div>
+            <div class="nutrition-item">
+                <div class="value">1%</div>
+                <div class="label">Carbs</div>
+                <div class="dv">4g</div>
+            </div>
+            <div class="nutrition-item">
+                <div class="value">3%</div>
+                <div class="label">Fiber</div>
+                <div class="dv">&lt;1g</div>
+            </div>
+            <div class="nutrition-item">
+                <div class="value">15%</div>
+                <div class="label">Potassium</div>
+                <div class="dv">530mg</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

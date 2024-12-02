@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingrédients - Pain Perdu Fourré aux Fruits</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F9F9;
+            color: #333333;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            text-align: center;
+            color: #000000;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .ingredients, .recipe-image {
+            width: 50%;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li::before {
+            content: "+";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #f57c00;
+            background-color: #fff3e0;
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        .recipe-image {
+            text-align: center;
+        }
+
+        .recipe-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .info div {
+            text-align: center;
+        }
+
+        .info div h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            margin: 0;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        .nutrition-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 40px 20px;
+        }
+
+        .nutrition-info .circle {
+            width: 110px;
+            height: 110px;
+            background-color: #fff3e0;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            color: #f57c00;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .nutrition-info .circle h3 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nutrition-info .circle p {
+            margin: 0;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ingrédients pour le Pain Perdu Fourré aux Fruits</h1>
+
+    <div class="container">
+        <div class="ingredients">
+            <ul>
+                <li>1 tasse de myrtilles surgelées (légèrement décongelées)</li>
+                <li>1 tasse de pêches surgelées (légèrement décongelées)</li>
+                <li>2 tasses de lait d'amande (divisé)</li>
+                <li>1/2 tasse de poudre de protéine à la vanille (divisée)</li>
+                <li>2 c. à soupe de miel (divisé)</li>
+                <li>1 tasse de granola (divisé)</li>
+                <li>2 c. à soupe de crème (pour la garniture, optionnel)</li>
+                <li>1/4 tasse de myrtilles (pour la garniture, optionnel)</li>
+                <li>4 tranches de pêches (pour la garniture, optionnel)</li>
+            </ul>
+        </div>
+        
+        <div class="recipe-image">
+            <img src="fruit_stuffed_french_toast.webp" alt="Pain Perdu Fourré aux Fruits">
+        </div>
+    </div>
+
+    <div class="info">
+        <div>
+            <h2>9</h2>
+            <p>Ingrédients</p>
+        </div>
+        <div>
+            <h2>5</h2>
+            <p>Minutes</p>
+        </div>
+        <div>
+            <h2>880</h2>
+            <p>Calories</p>
+        </div>
+    </div>
+
+    <div class="nutrition-info">
+        <div class="circle">
+            <h3>880</h3>
+            <p>Calories</p>
+        </div>
+        <div class="circle">
+            <h3>13%</h3>
+            <p>Sodium<br>(300mg)</p>
+        </div>
+        <div class="circle">
+            <h3>46%</h3>
+            <p>Graisses<br>(30g)</p>
+        </div>
+        <div class="circle">
+            <h3>39%</h3>
+            <p>Glucides<br>(116g)</p>
+        </div>
+        <div class="circle">
+            <h3>56%</h3>
+            <p>Fibres<br>(14g)</p>
+        </div>
+        <div class="circle">
+            <h3>44%</h3>
+            <p>Potassium<br>(1530mg)</p>
+        </div>
+    </div>
+
+</body>
+</html>

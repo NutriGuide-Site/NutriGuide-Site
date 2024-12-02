@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingrédients et Nutrition</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F9F9;
+            color: #333333;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            text-align: center;
+            color: #000000; /* Titre en noir */
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin-top: 20px;
+            gap: 30px;
+        }
+
+        .ingredients {
+            width: 50%; /* Ajuste la largeur des ingrédients */
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li::before {
+            content: "+";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #FF5722; /* Orange */
+            background-color: #FFF3E0; /* Fond léger */
+            border-radius: 50%;
+            margin-right: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        ul li:hover::before {
+            transform: scale(1.2);
+        }
+
+        .recipe-image {
+            width: 50%; /* Ajuste la largeur de l'image pour être égale à celle des ingrédients */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .recipe-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .info div {
+            text-align: center;
+        }
+
+        .info div h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            margin: 0;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        .info div p {
+            margin: 5px 0;
+        }
+
+        .nutrition-section {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .nutrition-section h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .nutrition-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .nutrition-item {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #FFECB3; /* Cercle orange pâle */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nutrition-item .value {
+            font-size: 22px;
+            font-weight: bold;
+            color: #E65100; /* Texte orange foncé */
+        }
+
+        .nutrition-item .label {
+            font-size: 14px;
+            color: #000;
+        }
+
+        .nutrition-item .dv {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ingrédients pour la Soupe Marocaine aux Lentilles Rouges</h1>
+
+    <div class="container">
+        <div class="ingredients">
+            <ul>
+                <li>Huile d'olive</li>
+                <li>1 oignon blanc (petit, finement haché)</li>
+                <li>3 carottes (lavées et coupées en petits morceaux)</li>
+                <li>Sel kasher</li>
+                <li>Poivre noir fraîchement moulu</li>
+                <li>1 c. à café de curcuma moulu</li>
+                <li>1/2 c. à café de cannelle</li>
+                <li>1 pincée de piment de Cayenne</li>
+                <li>3 gousses d'ail (finement hachées)</li>
+                <li>1 c. à soupe de gingembre frais (râpé, environ 2-3 cm)</li>
+                <li>425 g de sauce tomate</li>
+                <li>1 tasse de lentilles rouges (fendues)</li>
+                <li>4 tasses de bouillon</li>
+                <li>1/2 tasse de persil haché (finement)</li>
+                <li>1/3 tasse de coriandre hachée (finement)</li>
+                <li>Quartiers de citron (pour garnir, optionnel)</li>
+            </ul>
+        </div>
+        
+        <div class="recipe-image">
+            <img src="moroccan_red_lentil_soup.webp" alt="Soupe Marocaine aux Lentilles Rouges">
+        </div>
+    </div>
+
+    <div class="info">
+        <div>
+            <h2>16</h2>
+            <p>Ingrédients</p>
+        </div>
+        <div>
+            <h2>105</h2>
+            <p>Minutes</p>
+        </div>
+        <div>
+            <h2>440</h2>
+            <p>Calories</p>
+        </div>
+    </div>
+
+    <div class="nutrition-section">
+        <h2>Nutrition</h2>
+        <div class="nutrition-container">
+            <div class="nutrition-item">
+                <div class="value">440</div>
+                <div class="label">CALORIES</div>
+            </div>
+            <div class="nutrition-item">
+                <div class="value">43%</div>
+                <div class="label">SODIUM</div>
+                <div class="dv">1020mg</div>
+            </div>
+            <div class="nutrition-item">
+                <div class="value">17%</div>
+                <div class="label">FAT</div>
+                <div class="dv">11g</div>
+            </div>
+            <div class="nutrition-item">
+                <div class="value">22%</div>
+                <div class="label">CARBS</div>
+                <div class="dv">65g</div>
+            </div>
+            <div class="nutrition-item">
+                <div class="value">88%</div>
+                <div class="label">FIBER</div>
+                <div class="dv">22g</div>
+            </div>
+            <div class="nutrition-item">
+                <div class="value">3%</div>
+                <div class="label">POTASSIUM</div>
+                <div class="dv">1350mg</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

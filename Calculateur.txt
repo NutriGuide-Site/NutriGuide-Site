@@ -1,0 +1,205 @@
+<html lang="fr"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Calories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: #4CAF50;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #444;
+        }
+
+        input, select {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #4CAF50;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #4CAF50;
+            background-color: #eafbea;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .result.hidden {
+            display: none;
+        }
+
+        .image-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 120px;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="calories.jpg" alt="Calories Image">
+        </div>
+        <h1>Calculateur de Calories</h1>
+        <p>
+            Découvrez votre apport calorique journalier recommandé ! Ce calcul prend en compte vos informations 
+            personnelles pour vous aider à atteindre vos objectifs.
+        </p>
+
+        <!-- Formulaire HTML -->
+        <form id="caloriesForm">
+            <label for="weight">Poids (kg):</label>
+            <input type="number" id="weight" required="" placeholder="Ex: 70">
+
+            <label for="height">Taille (cm):</label>
+            <input type="number" id="height" required="" placeholder="Ex: 170">
+
+            <label for="age">Âge:</label>
+            <input type="number" id="age" required="" placeholder="Ex: 25">
+
+            <label for="gender">Sexe:</label>
+            <select id="gender">
+                <option value="male">Homme</option>
+                <option value="female">Femme</option>
+            </select>
+
+            <label for="activityLevel">Niveau d'activité:</label>
+            <select id="activityLevel">
+                <option value="1.375">Légèrement actif</option>
+                <option value="1.55">Modérément actif</option>
+                <option value="1.725">Très actif</option>
+            </select>
+
+            <label for="goal">Objectif:</label>
+            <select id="goal">
+                <option value="maintain">Maintien</option>
+                <option value="lose">Perte de poids</option>
+                <option value="gain">Gain de poids</option>
+            </select>
+
+            <button type="button" onclick="calculateCalories()">Calculer</button>
+        </form>
+
+        <!-- Zone d'affichage des résultats -->
+        <div id="result" class="result hidden"></div>
+    </div>
+
+    <script>
+        function calculateCalories() {
+            // Récupération des valeurs du formulaire
+            const weight = parseFloat(document.getElementById("weight").value);
+            const height = parseFloat(document.getElementById("height").value);
+            const age = parseInt(document.getElementById("age").value);
+            const gender = document.getElementById("gender").value;
+            const activityLevel = parseFloat(document.getElementById("activityLevel").value);
+            const goal = document.getElementById("goal").value;
+
+            if (isNaN(weight) || isNaN(height) || isNaN(age)) {
+                alert("Veuillez remplir tous les champs avec des valeurs valides.");
+                return;
+            }
+
+            // Calcul du métabolisme basal (MB) selon la formule de Harris-Benedict
+            let basalMetabolicRate;
+            if (gender === "male") {
+                basalMetabolicRate = 10 * weight + 6.25 * height - 5 * age + 5;
+            } else {
+                basalMetabolicRate = 10 * weight + 6.25 * height - 5 * age - 161;
+            }
+
+            // Calcul des besoins caloriques journaliers en fonction du niveau d'activité
+            const dailyCalories = basalMetabolicRate * activityLevel;
+
+            // Ajustement selon l'objectif
+            let adjustedCalories;
+            if (goal === "maintain") {
+                adjustedCalories = dailyCalories; // Maintien
+            } else if (goal === "lose") {
+                adjustedCalories = dailyCalories - 500; // Perte de poids (~500 kcal de déficit)
+            } else if (goal === "gain") {
+                adjustedCalories = dailyCalories + 500; // Gain de poids (~500 kcal d'excédent)
+            }
+
+            // Affichage des résultats dans la div "result"
+            const resultDiv = document.getElementById("result");
+            resultDiv.classList.remove("hidden");
+            resultDiv.textContent = `Vos besoins caloriques journaliers sont de ${Math.round(adjustedCalories)} kcal.`;
+        }
+    </script>
+
+
+</body></html>
