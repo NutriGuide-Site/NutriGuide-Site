@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriGuide | Recettes Faciles et Saines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F9F9; /* Fond gris clair */
+            color: #333333; /* Texte gris foncé */
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #000000; /* Changement de couleur en noir pour le titre principal */
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #555555; /* Texte légèrement gris */
+            margin-bottom: 30px;
+        }
+
+        .recipes-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .recipe {
+            background-color: #FFFFFF; /* Fond blanc des cartes */
+            border: 1px solid #E0E0E0; /* Bordure grise claire */
+            border-radius: 8px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .recipe:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .recipe img {
+            width: 100%;
+            border-bottom: 4px solid #FFA500; /* Ligne orange sous l'image */
+            border-radius: 8px 8px 0 0;
+        }
+
+        .recipe h4 {
+            font-size: 18px;
+            margin: 10px 0 5px 0;
+            color: #333333; /* Gris foncé pour le titre */
+        }
+
+        .recipe p {
+            font-size: 14px;
+            color: #555555; /* Texte gris clair pour les descriptions */
+            margin: 0 10px 10px 10px;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Recettes Faciles et Saines de plusieurs pays</h1>
+    <p>Découvrez des recettes équilibrées inspirées de diverses cultures</p>
+
+    <div class="recipes-container">
+        <!-- Recette 1 -->
+        <div class="recipe">
+            <a href="ingredients_broccoli_soup.html">
+                <img src="broccoli_cheese_soup.webp" alt="Meilleure Soupe au Brocoli et Fromage">
+            </a>
+            <h4>Meilleure Soupe au Brocoli et Fromage</h4>
+            <p>Soupe crémeuse au brocoli et fromage, réconfortante et facile à faire.</p>
+        </div>
+
+        <!-- Recette 2 -->
+        <div class="recipe">
+            <a href="ingredients_moroccan_lentil_soup.html">
+                <img src="moroccan_red_lentil_soup.webp" alt="Soupe Marocaine aux Lentilles Rouges">
+            </a>
+            <h4>Soupe Marocaine aux Lentilles Rouges</h4>
+            <p>Soupe réconfortante et épicée, parfaite pour réchauffer les soirées.</p>
+        </div>
+
+        <!-- Recette 3 -->
+        <div class="recipe">
+            <a href="ingredients_caesar_salad.html">
+                <img src="caesar_salad.webp" alt="Salade César">
+            </a>
+            <h4>Salade César</h4>
+            <p>Salade classique avec romaine croquante, parmesan et une vinaigrette maison.</p>
+        </div>
+
+        <!-- Recette 4 -->
+        <div class="recipe">
+            <a href="ingredients_turkish_chicken_kebab.html">
+                <img src="turkish_chicken_kebab.webp" alt="Brochette de Poulet Turc (Tavuk Shish)">
+            </a>
+            <h4>Brochette de Poulet Turc (Tavuk Shish)</h4>
+            <p>Brochette de poulet mariné aux épices, grillée et servie avec une touche de citron.</p>
+        </div>
+
+        <!-- Recette 5 -->
+        <div class="recipe">
+            <a href="ingredients_carrot_cake.html">
+                <img src="carrot_cake.webp" alt="Carrot Cake – Healthy Make Ahead Breakfast Cookies">
+            </a>
+            <h4>Carrot Cake – Healthy Breakfast Cookies</h4>
+            <p>Cookies sains au goût de carrot cake, parfaits pour un petit-déjeuner.</p>
+        </div>
+
+        <!-- Recette 6 -->
+        <div class="recipe">
+            <a href="ingredients_banana_bread.html">
+                <img src="banana_bread.webp" alt="Banana Bread Santé sans Farine (5 Ingrédients)">
+            </a>
+            <h4>Banana Bread Santé sans Farine</h4>
+            <p>Banana bread simple et sain, sans farine, idéal pour le petit-déjeuner.</p>
+        </div>
+
+        <!-- Recette 7 -->
+        <div class="recipe">
+            <a href="ingredients_fruit_stuffed_french_toast.html">
+                <img src="fruit_stuffed_french_toast.webp" alt="Pain Perdu Fourré aux Fruits">
+            </a>
+            <h4>Pain Perdu Fourré aux Fruits</h4>
+            <p>Un délicieux bol de petit-déjeuner avec des fruits frais et une touche sucrée.</p>
+        </div>
+
+        <!-- Recette 8 -->
+        <div class="recipe">
+            <a href="ingredients_protein_cookies.html">
+                <img src="protein_cookies.webp" alt="Biscuits Protéinés">
+            </a>
+            <h4>Biscuits Protéinés</h4>
+            <p>Des biscuits sains et riches en protéines, parfaits pour une collation énergisante.</p>
+        </div>
+    </div>
+
+</body>
+</html>
